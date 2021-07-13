@@ -35,6 +35,7 @@ unsigned char pay[]{
 	FARPROC fprc_func;
 	hmod_libname = LoadLibraryW(L"Kernel32.dll");
 	fprc_func = GetProcAddress(hmod_libname, "WinExec");
+	printf("%s is located at 0x%08x in %s\n", "WinExec",(unsigned int)fprc_func,"Kernel32.dll");
 	// WinExec Address: 775dcd30
 */
 
