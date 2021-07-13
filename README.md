@@ -1,2 +1,2 @@
 # Shellcoding
-Repo for some shellcode
+Learning some asm and making it into some shellcode
